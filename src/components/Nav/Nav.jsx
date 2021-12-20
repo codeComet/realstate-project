@@ -7,7 +7,6 @@ import "./Nav.css";
 import { HiMenuAlt3 } from "react-icons/hi";
 
 const Navbar = styled.nav`
-  background-color: salmon;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -59,20 +58,11 @@ const NavLinks = styled(Link)`
   }
 `;
 
-const NavBtn = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const Nav = () => {
+const Nav = ({ toggleDropdown }) => {
   return (
     <Navbar>
       <Logo to="/">State Properties</Logo>
-      <MenuBar>
+      <MenuBar onClick={toggleDropdown}>
         <HiMenuAlt3 />
       </MenuBar>
       <NavMenu>
