@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Dropdown from "./components/Dropdown";
 import Hero from "./components/Hero/Hero";
+import Info from "./components/Info/Info";
 import Nav from "./components/Nav/Nav";
+import { InfoData } from "./Data/InfoData";
 import { SliderOne } from "./Data/SliderData";
 import GlobalStyle from "./globalStyles";
 
@@ -16,6 +18,7 @@ function App() {
       <Nav toggleDropdown={toggleDropdown} />
       <Hero slider={SliderOne} />
       <Dropdown dropdown={dropdown} toggleDropdown={toggleDropdown} />
+      <Info {...InfoData} />
     </div>
   );
 }
