@@ -19,3 +19,8 @@
 .contact-btn:hover {
   transform: translateY(-2px);
 }
+
+.navBg {
+  background-color: #ff8100;
+  transition: 0.4s;
+}

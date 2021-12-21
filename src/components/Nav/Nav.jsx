@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { css } from "styled-components";
@@ -59,8 +59,23 @@ const NavLinks = styled(Link)`
 `;
 
 const Nav = ({ toggleDropdown }) => {
+  const [navDown, setNavDown] = useState(false);
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 65) {
+      setNavDown(true);
+    } else {
+      setNavDown(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
   return (
-    <Navbar>
+    <Navbar className={navDown && "navBg"}>
       <Logo to="/">State Properties</Logo>
       <MenuBar onClick={toggleDropdown}>
         <HiMenuAlt3 />
