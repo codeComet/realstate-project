@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Dropdown from "./components/Dropdown";
 import Hero from "./components/Hero/Hero";
 import Info from "./components/Info/Info";
+import Interior from "./components/Interior/Interior";
 import Nav from "./components/Nav/Nav";
 import NewHome from "./components/NewHome/NewHome";
 import { InfoData } from "./Data/InfoData";
@@ -21,6 +22,7 @@ function App() {
       <Dropdown dropdown={dropdown} toggleDropdown={toggleDropdown} />
       <Info {...InfoData} />
       <NewHome />
+      <Interior />
     </div>
   );
 }
