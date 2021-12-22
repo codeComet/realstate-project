@@ -7,15 +7,20 @@ const Section = styled.div`
   height: 100%;
   padding: 4rem 0rem;
   background: #000;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 const Container = styled.div`
   padding: 3rem calc((100vw - 1300px) / 2);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 800px;
+  grid-template-rows: 500px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    padding-top: 0;
   }
 `;
 const LeftColumn = styled.div`

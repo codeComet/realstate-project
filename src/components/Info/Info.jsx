@@ -5,6 +5,10 @@ const Section = styled.section`
   width: 100%;
   height: 100%;
   padding: 4rem 0rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 const Container = styled.div`
   padding: 3rem calc((100vw - 1300px) / 2);
@@ -14,6 +18,8 @@ const Container = styled.div`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    padding-top: 0;
+    grid-template-rows: 500px;
   }
 `;
 const ColumnLeft = styled.div`
@@ -84,7 +90,7 @@ const Info = ({ heading, paraOne, paraTwo, buttonLabel, image, reverse }) => {
   return (
     <Section>
       <Container>
-        <ColumnLeft>
+        <ColumnLeft reverse={reverse}>
           <h1>{heading}</h1>
           <p>{paraOne}</p>
           <p>{paraTwo}</p>

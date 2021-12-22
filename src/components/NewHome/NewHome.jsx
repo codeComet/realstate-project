@@ -60,7 +60,7 @@ const Heading = styled.h1`
 
 const Container = styled.div`
   text-align: center;
-  padding: 0rem 1rem;
+  padding: 0rem 1rem 5rem;
   display: flex;
   margin-top: -5rem;
   justify-content: space-around;

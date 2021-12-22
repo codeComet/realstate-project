@@ -76,7 +76,7 @@ const Nav = ({ toggleDropdown }) => {
   });
   return (
     <Navbar className={navDown && "navBg"}>
-      <Logo to="/">State Properties</Logo>
+      <Logo to="/">Properties.com</Logo>
       <MenuBar onClick={toggleDropdown}>
         <HiMenuAlt3 />
       </MenuBar>
