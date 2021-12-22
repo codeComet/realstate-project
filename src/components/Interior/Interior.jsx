@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import InteriorData from "../../Data/Interior";
+import LightSpeed from "react-reveal/LightSpeed";
 
 const Section = styled.div`
   width: 100%;
@@ -97,12 +98,16 @@ const Interior = () => {
     <Section>
       <Container>
         <LeftColumn>
-          <h1>{InteriorData.title}</h1>
-          <p>{InteriorData.para}</p>
-          <Button>{InteriorData.btnLabel}</Button>
+          <LightSpeed left cascade>
+            <h1>{InteriorData.title}</h1>
+            <p>{InteriorData.para}</p>
+            <Button>{InteriorData.btnLabel}</Button>
+          </LightSpeed>
         </LeftColumn>
         <RightColumn>
-          <img src={InteriorData.image} alt="img" />
+          <LightSpeed right>
+            <img src={InteriorData.image} alt="img" />
+          </LightSpeed>
         </RightColumn>
       </Container>
     </Section>

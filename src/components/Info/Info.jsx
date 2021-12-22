@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 
 const Section = styled.section`
   width: 100%;
@@ -91,13 +93,17 @@ const Info = ({ heading, paraOne, paraTwo, buttonLabel, image, reverse }) => {
     <Section>
       <Container>
         <ColumnLeft reverse={reverse}>
-          <h1>{heading}</h1>
-          <p>{paraOne}</p>
-          <p>{paraTwo}</p>
-          <Button>{buttonLabel}</Button>
+          <Fade left>
+            <h1>{heading}</h1>
+            <p>{paraOne}</p>
+            <p>{paraTwo}</p>
+            <Button>{buttonLabel}</Button>
+          </Fade>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
-          <img src={image} alt="img" />
+          <Slide right>
+            <img src={image} alt="img" />
+          </Slide>
         </ColumnRight>
       </Container>
     </Section>
